@@ -850,7 +850,7 @@ int flb_parser_conf_file(const char *file, struct flb_config *config)
         cfg = (char *) file;
     }
 
-    cf = flb_cf_create_from_file(config->cf_parsers, cfg);
+    cf = flb_cf_create_from_file(NULL, cfg);
 #else
     cf = flb_config_static_open(file);
     if (cf) {
